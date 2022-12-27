@@ -1,0 +1,110 @@
+.container {
+  position: relative;
+  width: 20em;
+  min-height: 1.5em;
+  border: 0.05em solid #777;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+  margin: 20px;
+}
+
+.container:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+
+.valueStyles {
+  flex-grow: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.divider {
+  background-color: #777;
+  width: 0.05em;
+  align-self: stretch;
+}
+.caret {
+  translate: 0 25%;
+  border: solid 0.25em transparent;
+  border-top-color: #777;
+  width: 0.05em;
+  cursor: pointer;
+}
+.lists {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 15em;
+  overflow-y: auto;
+  position: absolute;
+  top: calc(100% + 0.25em);
+  width: 100%;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+
+  border: 0.05em solid #777;
+  border-radius: 0.05em;
+}
+.lists.show{
+    display: block;
+}
+.clearBtn {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.25em;
+  cursor: pointer;
+  padding: 0;
+  color: #777;
+}
+
+.clearBtn:focus,
+.clearBtn:hover {
+  color: #333;
+}
+
+.list_items{
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.list_items.selected{
+  background-color: hsl(200, 100%, 70%);
+}
+
+.list_items.highlighted{
+    background-color: hsl(200, 100%, 50%);
+    color: #fff;
+}
+
+.option_badge{
+  background: none;
+  outline: none;
+  border:1px solid #777;
+  padding: .10em .25em;
+  border-radius: .25em;
+}
+
+
+.option_badge:hover, .option_badge:focus{
+  background-color: hsl(0, 100%, 90%);
+  border-color: hsl(0, 100%, 50%);
+}
+
+.option_badge:hover > span, .option_badge:focus > span{
+  color: hsl(0, 100%, 50%);
+}
+
+
+.option_badge > span{
+  font-size: 1.25em;
+  font-weight: medium;
+}
