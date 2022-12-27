@@ -78,7 +78,7 @@ export const Select = ({ value, onChange, options, multiple }: SelectProps) => {
           if (isOpen) selectOptions(options[highlightedIndex], true);
           break;
         case "ArrowDown":
-        case "ArrowUp":
+        case "ArrowUp": {
           if (!isOpen) {
             setIsOpen(true);
             break;
@@ -91,6 +91,10 @@ export const Select = ({ value, onChange, options, multiple }: SelectProps) => {
           ) {
             setHighlightedIndex(newHighlightedIndex);
           }
+          break;
+        }
+        case "Escape":
+          setIsOpen(false);
           break;
       }
     };
